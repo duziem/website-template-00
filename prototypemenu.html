@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+	<title></title>
+	<!--<link href="prototypemenu.css" rel="stylesheet"/>-->
+	<link href="prototypesection2.css" rel="stylesheet"/>
+</head>
+<body>
+	<div class="container">
+		<!-- The overlay -->
+		<div id="myNav" class="overlay">
+
+			<!-- Button to close the overlay navigation -->
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+			<!-- Overlay content -->
+			<div class="overlay-content">
+				<a href="#">Products</a>
+				<a href="#">Categories</a>
+				<a href="#">Services</a>
+			</div>
+
+		</div>
+		<header>
+			<div id="site-logo">
+			<h1 style="display:inline-block;color:ghostwhite;font-family:gothic">O</h1><h1 style="font-family:gothic;display:inline-block;color:pink">N</h1><h1 style="font-family:gothic;display:inline-block;color:ghostwhite">L</h1>
+			</div>
+			<nav>
+				<ul>
+					<li class="nav_menu">
+						<a href="#">Home</a>
+					</li>
+
+					<li class="nav_menu">
+						<a href="#">About</a>
+					</li>
+					
+					<li class="nav_menu">
+						<a href="#" onclick="openNav()">Products&nbsp;&#10065;</a>
+					</li>
+
+					<li class="nav_menu">
+						<a href="#">Contact_us</a>
+					</li>
+
+				</ul>
+			</nav>
+		</header>
+	</div><br><br><br><br>
+	
+	<section>
+		<div class="section_borders"></div>
+		<div class="image_div">
+			<div class="section_images" id="image_pair1"><img class="images" src="../okweburg/onl_products/clearpics/pp display book.jpg"><h3 class="image_caption"></h3></div>
+			<div class="section_images" id="image_pair2"><img class="images" src="../okweburg/onl_products/clearpics/A1 Drawing Board.jpg"><h3 class="image_caption"></h3></div>
+		<!--
+			<img src="../Ririo2Gaming/6288_335.jpg" class="section_images" id="image_pair1"></img>
+			<img src="../Ririo2Gaming/30034_353.png" class="section_images"></img>-->
+		</div>
+		<div class="section_borders"></div>
+		<div class="image_div">
+			<div class="section_images" id="image_pair1"><img class="images" src="../okweburg/onl_products/clearpics/Drafting Table.jpg"><h3 class="image_caption"></h3></div>
+			<div class="section_images" id="image_pair2"><img class="images" src="../okweburg/onl_products/clearpics/Drafting Machine.jpg"><h3 class="image_caption"></h3></div>
+		<!--
+			<img src="../Ririo2Gaming/6288_335.jpg" class="section_images" id="image_pair1"></img>
+			<img src="../Ririo2Gaming/30034_353.png" class="section_images"></img>-->
+		</div>
+	</section>
+	<aside>
+		<div>
+			<div id="asidediv_whitemiddle_border"></div>
+			<h2>Okweburg Nig Ltd</h2>
+			<div id="asidediv_whitemiddle_border"></div>
+			<p>Truly the leading importer and distributor of satationery<br>and office materials in the nation<br>and west africa</p>
+		</div>
+	</aside>
+	
+	<script>
+				/* Open */
+function openNav() {
+  document.getElementById("myNav").style.height = "100%";
+}
+
+/* Close */
+function closeNav() {
+  document.getElementById("myNav").style.height = "0%";
+}
+
+	//topimageboxscript
+var slideIndex = 0;
+showSlides();
+
+function showSlides(n){
+	var i;
+	var slides = document.getElementsByClassName("imageSlides");
+	var mySlides = document.getElementsByClassName("mySlides");
+		
+	for(i = 0;i < slides.length;i++){
+		slides[i].style.display = "none";
+	}
+	
+	for(i = 0;i < mySlides.length;i++){
+		mySlides[i].className = mySlides[i].className.replace("slideactive", "");
+	}
+	
+	slideIndex++;
+	if(slideIndex > slides.length){
+		slideIndex = 1;
+	}
+	slides[slideIndex - 1].style.display = "block";
+	mySlides[slideIndex - 1].className += " slideactive";
+	
+	setTimeout(showSlides,1500);
+}
+	</script>
+</body>
+</html>

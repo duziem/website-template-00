@@ -1,0 +1,32 @@
+<!Doctype html>
+<html>
+<head>
+	<title>okweburg webpage prototype</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link href="prototypesection.css" rel="stylesheet"/>
+</head>
+<body>
+	<div>
+		<div id="sidenews_slidingbar">
+			<span id="sidenews_togglebutton">News &amp Events</span>
+		</div>
+		<div id="sidenews_box"></div>
+	<div>
+	
+	<script>
+		var togglebutton = document.getElementById("sidenews_togglebutton");
+		var sideNewsBox = document.getElementById("sidenews_box");
+		var sidenews_slidingbar = document.getElementById("sidenews_slidingbar");
+		togglebutton.onclick = function(){
+			if(sideNewsBox.style.display == "block"){
+				sideNewsBox.style.display = "none";
+			}else{
+			sideNewsBox.style.display = "block";
+			//sidenews_slidingbar.style.right = "-2px";
+			//sidenews_slidingbar.style.float = "left";
+			}
+		}
+	</script>
+</body>
+</html>

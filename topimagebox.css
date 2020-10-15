@@ -1,0 +1,81 @@
+		*{
+			margin:0;
+			padding:0;
+			
+		}
+		
+		.topImageContainer{
+			position:relative;
+			background-image:url("jj-ying-236821-unsplash.jpg");
+			min-height:500px;
+			background-size:800px;
+			/*top:200px;*/
+		}
+		
+		.topImageBox{
+			position:absolute;
+			
+			top:50%;
+			left:50%;
+			transform:translate(-50%,-50%);
+			
+			display:flex;
+			align-items:center;
+			justify-content:center;
+		}
+		
+		.imageSet1{
+			min-width:336px;
+			margin:0;
+			padding:0;
+		}
+		.imageSet1 div:first-of-type{
+			margin-bottom:10px;
+		}
+		.imageSet1 div li{
+			display:inline-flex;
+			list-style:none;
+		}
+		.imageSet1 div li:first-of-type{
+			margin-right:8px;
+		}
+		.imageSet1 div li img{
+			width:160px;
+			height:100px;
+		}
+		
+		.imageSet2{
+			margin:0;
+			padding:0;
+			min-width:336px;
+		}
+		.imageSet2 div{
+			/*width:340px;*/
+		}
+		.imageSet2 div:first-of-type{
+			margin-bottom:10px;
+		}
+		.imageSet2 div li{
+			display:inline-flex;
+		}
+
+		.imageSet2 div li:first-of-type{
+			margin-right:8px;
+		}
+		.imageSet2 div li img{
+			width:160px;
+			height:100px;
+		}
+		
+		.slideactive{
+			border:2px outset gold;
+		}
+		
+		.slideshow{
+			margin:0 10px;
+		}
+		
+		.imageSlides img{
+			width:600px;
+			height:360px;
+		}

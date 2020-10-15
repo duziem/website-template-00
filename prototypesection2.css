@@ -1,0 +1,135 @@
+
+		section{
+			float:left;
+		}
+		section .section_borders{
+			background:linear-gradient(to right,pink 60%,salmon 100%);
+			width:840px;
+			height:6px;
+		}
+		section .image_div{
+			visibility:hidden;
+		}
+		.section_images{
+			max-width:240px;
+			height:240px;
+			outline:6px ridge pink;
+			position:relative;
+		}
+		.section_images img{
+			max-width:240px;
+			height:100%;
+		}
+		.section_images h3{
+			position:absolute;
+			bottom:0;
+			background:ghostwhite;
+			height:0;
+			width:100%;
+			transition:0.5s;
+			color:pink;
+		}
+		/*
+		.image_div #image_pair1{
+			margin-right:100px;
+		}*/
+		/*
+		.slideUp #image_pair1{
+			margin-right:100px;
+		}*/
+		.slideUp #image_pair2{
+			left:50%;
+			/*top:-240px;*/
+		} 
+		aside{
+			/*float:right;*/
+			min-width:1000px;
+			min-height:300px;
+			transform:rotate(90deg);
+			background:linear-gradient(to right,pink 40%,salmon 100%);
+			text-align:center;
+			position:absolute;
+			top:340px;
+			right:-260px;
+			box-sizing:border-box;
+			padding-top:60px;
+		}
+		aside h2{
+			color:ghostwhite;
+			text-transform:uppercase;
+		}
+		aside #asidediv_whitemiddle_border{
+			width:100%;
+			height:4px;
+			background:ghostwhite;
+		}
+		aside p{
+			font:20px normal;
+			color:ghostwhite;
+		}
+		
+		/********class that will be added to the section image_div as you scroll down************/
+		.slideUp{
+			animation-name:slideup;
+			animation-duration:1s;
+			-webkit-animation-name:slideup;
+			-webkit-animation-duration:1s;
+			visibility:visible;
+			padding:30px 0 30px 70px;
+		}
+		@keyframes slideup{
+			0%{
+				opacity:0;
+				transform:translateY(70%);
+			}
+			100%{
+				opacity:1;
+				transform:translateY(0%);	
+			}
+		}
+		@-webkit-keyframes slideup{
+			0%{
+				opacity:0;
+				transform:translateY(70%);
+			}
+			100%{
+				opacity:1;
+				transform:translateY(0%);	
+			}
+		}
+		
+		.sliding_news{
+			position:absolute;
+			right:0;
+			height:auto;
+			z-index:1;
+		}
+		#sidenews_slidingbar{
+			position:relative;
+			width:80px;
+			right:0;
+			top:0;
+			float:left;
+		}
+		#sidenews_slidingbar span{
+			position:absolute;
+			border:2px outset lightgray;
+			transform:rotate(-90deg);
+			top:40px;
+			right:-40px;
+			color:pink;
+			cursor:pointer;
+		}
+		#sidenews_slidingbar span:hover{
+			color:lightblue;
+		}
+		
+		.sliding_news #sidenews_box{
+			min-width:600px;
+			min-height:600px;
+			display:none;
+			border:2px outset lightgray;
+			float:right;
+			background:ghostwhite;
+		}
+		

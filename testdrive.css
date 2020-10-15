@@ -1,0 +1,15 @@
+#box{
+	//background:darkslategray;
+	border:3px ridge gold;
+	height:50px;
+	display:-webkit-box;
+	-webkit-box-pack:center;
+}
+
+#span{
+	background:#420;
+	border:3px ridge black;
+	height:30px;
+	width: 80px;
+	display:none;
+}

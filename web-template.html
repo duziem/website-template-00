@@ -1,0 +1,322 @@
+<!Doctype html>
+<html>
+<head>
+	<title>okweburg webpage prototype</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="topimagebox.css" rel="stylesheet"/>
+	<link href="prototypemenu.css" rel="stylesheet"/>
+	<link href="prototypesection2.css" rel="stylesheet"/>
+	<link href="prototypefooter.css" rel="stylesheet"/>
+	<style>
+		.fade{
+			animation-name:fadeIn;
+			animation-duration:1s;
+			visibility:visible;
+		}
+		@keyframes fadeIn{
+			from{
+				opacity:0;
+			}to{
+				opacity:1;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+			<!-- The overlay -->
+		<div id="myNav" class="overlay">
+
+			<!-- Button to close the overlay navigation -->
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+			<!-- Overlay content -->
+			<div class="overlay-content">
+				<a href="#">Products</a>
+				<a href="#">Categories</a>
+				<a href="#">Services</a>
+			</div>
+
+		</div>
+		<header>
+			<div id="site-logo">
+			<h1 style="display:inline-block;color:ghostwhite;font-family:gothic">O</h1><h1 style="font-family:gothic;display:inline-block;color:pink">N</h1><h1 style="font-family:gothic;display:inline-block;color:ghostwhite">L</h1>
+			</div>
+			<nav>
+				<ul>
+					<li class="nav_menu">
+						<a href="#">Home</a>
+					</li>
+
+					<li class="nav_menu">
+						<a href="#">About</a>
+					</li>
+					
+					<li class="nav_menu">
+						<a href="#" onclick="openNav()">Products&nbsp;&#10065;</a>
+					</li>
+
+					<li class="nav_menu">
+						<a href="#">Contact_us</a>
+					</li>
+
+				</ul>
+			</nav>
+		</header>
+	<div class="topImageContainer">
+		<div class="topImageBox">
+			<ul class="imageSet1">
+				<div>
+					<li class="mySlides slideactive">
+						<img src="../okweburg/onl_products/clearpics/pp display book.jpg">
+					</li>
+		
+					<li class="mySlides">
+						<img src="../okweburg/onl_products/clearpics/A1 Drawing Board.jpg">
+					</li>
+				</div>
+				<div>
+					<li class="mySlides">
+						<img src="../okweburg/./onl_products/clearpics/Drafting Table.jpg">
+					</li>
+				
+					<li class="mySlides">
+						<img src="../okweburg/onl_products/clearpics/Drafting Machine.jpg">
+					</li>
+				</div>
+			</ul>
+				
+			<div class="slideshow">
+				<div class="imageSlides">
+					<img src="../okweburg/onl_products/clearpics/pp display book.jpg">
+				</div>
+				
+				<div class="imageSlides">
+					<img src="../okweburg/onl_products/clearpics/A1 Drawing Board.jpg">
+				</div>
+				
+				<div class="imageSlides">
+					<img src="../okweburg/onl_products/clearpics/Drafting Table.jpg">
+				</div>
+				
+				<div class="imageSlides">
+					<img src="../okweburg/onl_products/clearpics/Drafting Machine.jpg">
+				</div>
+				
+				<div class="imageSlides">
+					<img src="../okweburg/onl_products/clearpics/ecowise ring binder 4204 series.jpg">
+				</div>
+				
+				<div class="imageSlides">
+					<img src="../okweburg/onl_products/clearpics/pencils.jpg">
+				</div>
+				
+				<div class="imageSlides">
+					<img src="../okweburg/onl_products/clearpics/Pen Set 3.jpg">
+				</div>
+				
+				<div class="imageSlides">
+					<img src="../okweburg/onl_products/clearpics/pen set 9.jpg">
+				</div>
+			</div>
+			
+			<ul class="imageSet2">
+				<div>
+					<li class="mySlides">
+						<img src="../okweburg/onl_products/clearpics/ecowise ring binder 4204 series.jpg">
+					</li>
+		
+					<li class="mySlides">
+						<img src="../okweburg/onl_products/clearpics/pencils.jpg">
+					</li>
+				</div>
+				<div>
+					<li class="mySlides">
+						<img src="../okweburg/onl_products/clearpics/Pen Set 3.jpg">
+					</li>
+				
+					<li class="mySlides">
+						<img src="../okweburg/onl_products/clearpics/pen set 9.jpg">
+					</li>
+				</div>
+			</ul>
+		</div>
+	</div>
+	
+	<div style="margin-top:100px;box-sizing:border-box;position:relative;z-index:0.5;">
+		<section>
+		<div class="section_borders"></div>
+		<div class="image_div">
+			<div class="section_images" id="image_pair1"><img class="images" src="../okweburg/onl_products/clearpics/pp display book.jpg"><h3 class="image_caption"></h3></div>
+			<div class="section_images" id="image_pair2"><img class="images" src="../okweburg/onl_products/clearpics/A1 Drawing Board.jpg"><h3 class="image_caption"></h3></div>
+		</div>
+		<div class="section_borders"></div>
+		<div class="image_div">
+			<div class="section_images" id="image_pair1"><img class="images" src="../okweburg/onl_products/clearpics/Drafting Table.jpg"><h3 class="image_caption"></h3></div>
+			<div class="section_images" id="image_pair2"><img class="images" src="../okweburg/onl_products/clearpics/Drafting Machine.jpg"><h3 class="image_caption"></h3></div>
+		</div>
+	</section>
+	
+	<!--news box that slides in and out-->
+		<div class="sliding_news">
+			<div id="sidenews_slidingbar">
+				<span id="sidenews_togglebutton">News &amp Events</span>
+			</div>
+			<div id="sidenews_box"></div>
+		</div>
+			
+	<aside>
+		<div>
+			<div id="asidediv_whitemiddle_border"></div>
+			<h2>Okweburg Nig Ltd</h2>
+			<div id="asidediv_whitemiddle_border"></div>
+			<p>Truly the leading importer and distributor of satationery<br>and office materials in the nation<br>and west africa</p>
+		</div>
+	</aside>
+	</div>
+	
+	<div id="div_before_footer" style="background:url('../okweburg/onl_products/clearpics/Drafting Machine.jpg');min-height:400px;width:100%;position:relative;box-sizing:border-box;background-size:cover;">
+		<div style="position:absolute;top:50%;transform:translateY(-50%);margin-left:10%">
+				<img src="../okweburg/onl_products/clearpics/pp display book.jpg" width="200px" height="200px" style="margin-left:10px"/>
+				<img src="../okweburg/onl_products/clearpics/t square.jpg" width="200px" height="200px" style="margin-left:10px"/>
+				<img src="../okweburg/onl_products/clearpics/A1 Drawing Board.jpg" width="200px" height="200px" style="margin-left:10px"/>
+				<img src="../okweburg/onl_products/clearpics/Drafting Table.jpg" width="200px" height="200px" style="margin-left:10px"/>
+				<img src="../okweburg/onl_products/clearpics/Presentation Aids.jpg" width="200px" height="200px" style="margin-left:10px"/>
+		</div>
+		<div id="overlapping_div" style="position:absolute;top:0;height:0;width:100%;background:rgba(0,0,0,.6);transition:0.6s ease"></div>
+		<div id="click_button" style="background-color:pink;visibility:hidden;border-radius:5px 5px;min-width:300px;height:auto;position:absolute;top:50%;left:40%;transform:translateY(-50%);cursor:pointer;color:ghostwhite;text-align:center">Click me<br>to view our products</div>
+	</div>
+		<footer class="footer-logos">
+			<ul>
+				<li><img src="./logos/rotringlogo.jpg" width="70px" height="40px"></li>
+				<li><img src="./logos/monamilogo.jpg" width="70px" height="40px"></li>
+				<li><img src="./logos/uhulogo.png" width="70px" height="40px"></li>
+				<li><img src="./logos/staedtlerlogo.png" width="70px" height="40px"></li>
+				<li><img src="./logos/skrebbalogo.png" width="70px" height="40px"></li>
+				<li><img src="./logos/kalboardlogo.jpg" width="70px" height="40px"></li>
+			</ul>
+			<ul>
+				<li><p style="color:#FFA07A;font-size:20px;display:inline;">BEI</p><p style="margin-right:10px;display:inline;color:dodgerblue;font-size:20px">JING</p></li>
+				<li><img src="./logos/royaltalenslogo.png" width="70px" height="40px"></li>
+				<li><img src="./logos/kangarologo.jpg" width="70px" height="40px"></li>
+				<li><img src="./logos/isomarslogo.jpg" width="70px" height="40px"></li>
+				<li><img src="./logos/rocadalogo.jpg" width="70px" height="40px"></li>
+			</ul>
+			<ul>
+				<li><p style="color:#FFA07A;font-size:20px;display:inline;">EL</p><p style="margin-right:10px;display:inline;color:dodgerblue;font-size:20px">FEN</p></li>
+				<li><p style="color:#FFA07A;font-size:20px;display:inline;">GLOBAL</p><p style="margin-right:10px;display:inline;color:dodgerblue;font-size:20px">NOTES</p></li>
+				<li><p style="color:#FFA07A;font-size:20px;display:inline;">SCHOELLER</p><p style="margin-right:10px;display:inline;color:dodgerblue;font-size:20px">SHAMMER</p></li>
+				<li><p style="color:#FFA07A;font-size:20px;display:inline;">MA</p><p style="margin-right:10px;display:inline;color:dodgerblue;font-size:20px">TAI</p></li>
+			</ul>
+			<ul>
+				<li><p style="color:#FFA07A;font-size:20px;display:inline;">DATA</p><p style="margin-right:10px;display:inline;color:dodgerblue;font-size:20px">ZONE</p></li>
+				<li><p style="color:#FFA07A;font-size:20px;display:inline;">LUX</p><p style="margin-right:10px;display:inline;color:dodgerblue;font-size:20px">OR</p></li>
+				<li><p style="color:#FFA07A;font-size:20px;display:inline;">DR</p><p style="margin-right:10px;display:inline;color:dodgerblue;font-size:20px">BOARD</p></li>
+				<li><p style="color:#FFA07A;font-size:20px;display:inline;">IN</p><p style="margin-right:10px;display:inline;color:dodgerblue;font-size:20px">TIME</p></li>
+			</ul>
+	</footer>
+</div>
+	<script>
+//overlaydropdownmenu script	
+/* Open */
+function openNav() {
+  document.getElementById("myNav").style.height = "100%";
+}
+
+/* Close */
+function closeNav() {
+  document.getElementById("myNav").style.height = "0%";
+}
+	//topimagebox script
+var slideIndex = 0;
+showSlides();
+
+function showSlides(n){
+	var i;
+	var slides = document.getElementsByClassName("imageSlides");
+	var mySlides = document.getElementsByClassName("mySlides");
+		
+	for(i = 0;i < slides.length;i++){
+		slides[i].style.display = "none";
+	}
+	
+	for(i = 0;i < mySlides.length;i++){
+		mySlides[i].className = mySlides[i].className.replace("slideactive", "");
+	}
+	
+	slideIndex++;
+	if(slideIndex > slides.length){
+		slideIndex = 1;
+	}
+	slides[slideIndex - 1].style.display = "block";
+	mySlides[slideIndex - 1].className += " slideactive";
+	
+	setTimeout(showSlides,1500);
+}
+	
+	//prototypesection2 script
+		window.onscroll = function(){slideUpFunction()};
+		
+		function slideUpFunction(){
+			if(document.body.scrollTop > 700 || document.documentElement.scrollTop > 700){
+				var imageDiv= document.getElementsByClassName("image_div");
+				var i;
+				for(i=0;i<imageDiv.length;i++){
+					imageDiv[i].className = "slideUp";
+				}
+			}
+		}
+		
+		var togglebutton = document.getElementById("sidenews_togglebutton");
+		var sideNewsBox = document.getElementById("sidenews_box");
+		var sidenews_slidingbar = document.getElementById("sidenews_slidingbar");
+		togglebutton.onclick = function(){
+			if(sideNewsBox.style.display == "block"){
+				sideNewsBox.style.display = "none";
+			}else{
+			sideNewsBox.style.display = "block";
+			//sidenews_slidingbar.style.right = "-2px";
+			//sidenews_slidingbar.style.float = "left";
+			}
+		}
+		
+		var newarray = ["pp display book","A1 Drawing Board","Drafting Table","Drafting Machine"];
+		var j;
+		var imageCaption = document.getElementsByClassName("image_caption");
+		var images = document.getElementsByClassName("images");
+		for(i=0;i<4;i++){
+		images[i].onmouseover = function(){for(i=0;i<4;i++){this.nextElementSibling.style.height = "50px";this.nextElementSibling.innerHTML = newarray[j];}};
+		}
+
+		window.onmouseover= function(e){if(!e.target.matches(".images") && !e.target.matches(".image_caption")){
+			for(i=0;i<imageCaption.length;i++){
+				imageCaption[i].style.height = "0px";
+				imageCaption[i].innerHTML = "";
+			}
+			}
+			hideAndSeek(e);
+		};
+		
+		var divBeforeFooter = document.getElementById("div_before_footer");
+		var overlappingDiv = document.getElementById("overlapping_div");
+		var clickButton = document.getElementById("click_button");
+		divBeforeFooter.onmouseover = function(){
+			overlappingDiv.style.height = "100%";
+			//clickButton.className = "fade";
+			//clickButton.style.visibility = "visible";
+			setTimeout(fadeIn,700);
+		};
+		function fadeIn(){
+			//clickButton.className = "fade";
+			clickButton.style.visibility = "visible";
+		}
+		
+		function hideAndSeek(e){if(!e.target.matches("#div_before_footer") && !e.target.matches("#overlapping_div") && !e.target.matches("#click_button")){
+			overlappingDiv.style.height = "0%";
+			clickButton.style.visibility = "hidden";
+			}
+		}
+	</script>
+</body>
+</html>

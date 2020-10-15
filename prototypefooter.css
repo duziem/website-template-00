@@ -1,0 +1,16 @@
+		footer{
+			background:linear-gradient(to top,rgba(0,0,0,.5),rgba(255,255,255,.4));
+			min-height:300px;
+			/*margin-top:1070px;*/
+		}
+		/*************logos at the footer***********/
+		.footer-logos{
+			display:flex;
+			flex-direction:column;
+			justify-content:center;
+		}
+		.footer-logos ul{
+			display:flex;
+			justify-content:center;
+			list-style:none;
+		}

@@ -1,0 +1,623 @@
+<!Doctype html>
+<html>
+<head>
+	<title>okweburg webpage prototype</title>
+	<meta charset="utf-8">
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
+	<link rel="stylesheet" rel="text/css" href="css/bootstrap.css">
+	<!--<link href="carousel.css" rel="stylesheet">-->
+<style>
+	*{
+	margin:0;
+	padding:0;
+	}
+	#container{
+	display:flex;
+	flex-direction:column;
+	background:url("plain-white-background.jpg");
+	}
+	/*style the box that contains the header, nav and carousel box*/
+	#header_nav_div{
+	background:url("abstract2.jpg");
+	height:500px;
+	position:relative;
+	}
+	/*style the header*/
+	#namebrand{
+	justify-content:flex-start;
+	display:flex;
+	flex-direction:row;
+	}
+	#okweburg-box{
+	display:flex;
+	flex-direction:row;
+	flex-wrap:nowrap;
+	justify-content:center;
+	margin:5px 5px;
+	box-sizing:border-box;
+	color:teal;
+	}
+	#nig-box{
+	display:flex;
+	flex-direction:row;
+	flex-wrap:nowrap;
+	justify-content:center;
+	margin:5px 5px;
+	box-sizing:border-box;
+	}
+	#ltd-box{
+	display:flex;
+	flex-direction:row;
+	flex-wrap:nowrap;
+	justify-content:center;
+	margin:5px 5px;
+	box-sizing:border-box;
+	color:teal;
+	}
+	
+	/*add a fade animation to the list-item elements*/
+	.brand{
+	list-style:none;
+	font:32px bold tahoma;
+	text-transform:uppercase;
+	-webkit-animation-name:fade;
+	-webkit-animation-duration:3s;
+	}
+	
+	/*add a fade animation to the list-item elements*/
+	@-webkit-keyframes fade{from{opacity:.4}to{opacity:1}}
+	
+	#okweburg-box .white-box{
+	border:2px ridge gray;
+	}
+	/*add a darkgreen color to the first and last elements of the nig-box div*/
+	#nig-box li[class="green-box"]{
+	background:#006400;
+	border:2px ridge gray;
+	}
+	#nig-box li[class="white-box"]{
+	background:#f1f1f1;
+	border:2px ridge gray;
+	flex-basis:20px;
+	}
+	#ltd-box .white-box{
+	border:2px ridge gray;
+	}
+/*style the navigation bar and its components*/
+#nav-box{
+border-top:2px ridge #ddd;
+border-bottom:2px ridge #ddd;
+display:flex;
+background:transparent;
+font:17px normal gothici;
+box-sizing:border-box;
+}
+#nav-links{
+display:flex;
+box-sizing:border-box;
+}
+/*style the navigation menu link items*/
+#nav-links a{
+padding:15px;
+border-left:1px ridge #ddd;
+border-right:1px ridge #ddd;
+text-decoration:none;
+color:teal;
+}
+
+/*change the properties of the navigation menu link items when you hover over them*/
+#nav-links a:hover{
+background:#ddd;
+text-decoration:none;
+color:teal;
+}
+
+/*set the navbar-toggle display to none*/
+#navbar-toggle{
+display:none;
+/*
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+align-self:center;
+margin-left:auto;
+background:darkslategray;
+border-radius:7px 7px;
+width:30px;
+height:30px;
+box-sizing:border-box;
+positon:absolute;
+*/
+}
+/*style the three bars within the navbar-toggle*/
+#navbar-toggle span{
+margin:2px;
+width:20px;
+height:2px;
+background:gray;
+}
+
+/*style the carousel containing sets of image products at the top within the header_nav div*/
+	.slidesinfo{
+		position:absolute;
+		bottom:0;
+		width:100%;
+		height:70px;
+		background:linear-gradient(to bottom,rgba(0,0,0,.2) 0%,rgba(255,255,255,.6) 100%);
+		color:white;
+		font:30px normal helvetica;
+		text-align:center;
+	}
+
+.slideshowcontainer{
+		position:relative;
+}
+.mySlides{
+	display:none;
+	height:auto;
+	-webkit-animation-name:fade;
+	-webkit-animation-duration:1.5s;
+}
+.slideactive{
+	display:block;
+}
+#bottomcarousel_div{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	margin-top:70px
+}
+.slideshowcontainer #hidden_div{
+	background:rgba(0,0,0,.8);
+	top:0;
+	height:400px;
+	width:1200px;
+	position:absolute;
+	visibility:hidden;
+}
+.slideshowcontainer a{
+	visibility:hidden;
+	background:#BA55D3;
+	text-align:center;
+	top:40%;
+	left:40%;
+	right:30%;
+	color:ghostwhite;
+	padding:5px;
+	position:absolute;
+	width:150px;
+	text-decoration:none;
+	border-radius:3px 3px;
+}
+
+.slideshowcontainer:hover #hidden_div{
+	visibility:visible;
+}
+.slideshowcontainer:hover a{
+	visibility:visible;
+}
+
+@-webkit-keyframes fade{
+	from{opacity:.4}to{opacity:1}
+	
+}
+
+/*style the image box located after the header_nav div*/
+	.imageBox{	
+	background-image:ghostwhite;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+	width:100%;
+	height:1200px;
+	
+	}
+	.imageBox h1{
+		position:absolute;
+		box-sizing:border-box;
+		color:darkslategray;
+		font-family:garamond;
+		text-align:center;
+		border-radius:7px 7px;
+		box-shadow:darkgray -10px 10px 10px;
+		background:-webkit-radial-gradient(center,circle,coral 20%,dodgerblue 100%);
+		animation-name:slideupdown;
+		animation-duration:3s;
+		animation-timing-function:ease;
+		animation-iteration-count:infinite;
+		animation-direction:alternate;	
+	}
+	@keyframes slideupdown{
+	from{top:100%;}to{top:90%;} /*animation to make the imageBox h1 slide up and down*/
+	}
+/*style the bottom list items immediately before the footer*/
+	#maindiv{
+			display:flex;
+			justify-content:center;
+			align-items:flex-start;
+			height:350px;
+		}
+		#maindiv .onl_services{
+			font-family:tahoma;
+			text-align:center;
+			border:3px inset slategray;
+			border-radius:7px 7px;
+			background:darkslategray;
+			
+		}
+		#maindiv .onl_services h2{
+			background:linear-gradient(to right, #778899 0%, darkslategray 100%);
+			/*box-shadow:rgba(0,0,20,.6) -8px 8px 4px;*/
+			color:lightseagreen;
+			font-family:tahoma,serif
+		}
+		#maindiv .onl_services p{
+			color:dodgerblue;
+			font:14px bold tahoma,arial;
+		}
+		#maindiv #productlisting{
+			margin-right:160px;
+		}
+		#maindiv .onl_services a{
+			text-decoration:none;
+		}
+		#maindiv .onl_services a button{
+			box-shadow:rgba(0,0,0,.8) 4px 4px 4px;
+		}
+		
+
+/***************The Overlay (background)************/
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */    
+  height: 0;
+  width: 100%;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background:url("plain-white-background.jpg");
+  /*background-color: rgb(0,0,0);*/ /* Black fallback color */
+  /*background-color: rgba(0,0,0, 0.9);*/ /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 25%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+  color: lightseagreen;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+.flip_box{
+	background-color:transparent;
+	width:1200px;
+	height:400px;
+	/*border:1px solid #f1f1f1;*/
+	perspective:1000px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	margin-top:120px;
+}
+
+.flip_box_inner{
+position:relative;
+width:100%;
+height:100%;
+text-align:center;
+transition:transform 0.8s;
+transform-style:preserve-3d;
+}
+/*
+.flip_box:hover .flip_box_inner{
+transform:rotateX(180deg);
+}*/
+
+.flip_box_front, .flip_box_back{
+position:absolute;
+width:100%;
+height:100%;
+backface-visibility:hidden;
+}
+.flip_box_front{
+color:black;
+background-color:#bbb;
+}
+.flip_box_back{
+color:white;
+background-color:lightpink;
+transform:rotateX(180deg);
+}
+
+/***********the facebook icon******************/
+.facebook-icon{
+	position:fixed;
+	right:1%;
+	bottom:10%;
+	text-decoration:none;
+	width:40px;
+	height:40px;
+	background:slategray;
+	border-radius:50%;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	z-index:2;
+}
+/*************logos at the footer***********/
+		.footer-logos{
+			display:flex;
+			flex-direction:column;
+			justify-content:center;
+		}
+		.footer-logos ul{
+			display:flex;
+			justify-content:center;
+			list-style:none;
+		}
+		
+</style>
+</head>
+<body>
+<div id="container">
+<!-- The overlay -->
+<div id="myNav" class="overlay">
+
+  <!-- Button to close the overlay navigation -->
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+  <!-- Overlay content -->
+  <div class="overlay-content">
+    <a href="onlproducts.html">Products</a>
+    <a href="#">Brands</a>
+  </div>
+
+</div>
+<!------the floating facebook icon at bottom right of the page--------->
+<a class="facebook-icon" href="#"><img src="facebook.png" width="30px" height="30px"></a>
+<div style="background:url('abstract2.jpg');"></div>
+<!--header containing the company name and admin section-->
+<div id="namebrand">
+	<div id="okweburg-box" class="brand" style="background:url('abstract1.jpg');">
+	<li class="white-box">o</li>
+	<li class="white-box">k</li>
+	<li class="white-box">w</li>
+	<li class="white-box">e</li>
+	<li class="white-box">b</li>
+	<li class="white-box">u</li>
+	<li class="white-box">r</li>
+	<li class="white-box">g</li>
+	</div>
+	<div id="nig-box" class="brand">
+	<li class="green-box">n</li>
+	<li class="white-box" style="flex-basis:30px;">i</li>
+	<li class="green-box">g</li>
+	</div>
+	<div id="ltd-box" class="brand">
+	<li class="white-box">l</li>
+	<li class="white-box">t</li>
+	<li class="white-box">d</li>
+	</div>
+	<a href="#" style="display:flex;flex-direction:column;align-items:flex-start;margin-left:auto;" title="Admin">
+		<div id="" style="border-radius:100%;width:30px;height:30px;background:darkslategray;margin-bottom:4px;"><i class="glyphicon glyphicon-user" style="margin:5px 0 0 7px"></i></div>
+		<div id="" style="color:lightgray;background:teal;margin-right:5px">Admin</div>
+	</a>
+</div>
+<nav id="nav_container">
+	<div id="nav-box">
+	<div id="nav-links">
+		<a class="navLink" href="onlhome.html"><i class="glyphicon glyphicon-home" style="margin-right:3px;"></i>HOME</a>
+		<a class="navLink" href="aboutonl.html"><i class="glyphicon glyphicon-globe" style="margin-right:3px;"></i>ABOUT</a>
+		<a class="navLink" href="javascript:void(0)" id="product_tab" onclick="openNav()">PRODUCTS &amp SERVICES<i class="glyphicon glyphicon-chevron-down" style="margin-left:3px;"></i></a>
+		<a class="navLink" href="contact_page.html"><i class="glyphicon glyphicon-phone" style="margin-right:3px;"></i>CONTACT US</a>
+	</div>
+
+	<!--toggle button that will be displayed on devices with smaller screen size-->
+	<!--
+	<button type="button" id="navbar-toggle">
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+	</button>-->
+	</div>
+</nav>
+<!--
+<div id="topcarousel_div" style="position:absolute;right:0;bottom:0">
+	<div class="slideshowcontainer">
+		<div class="mySlides">
+			<div><img src="./onl_products/clearpics/pp display book.jpg" width="1366px" height="390px"></div>
+			<div class="slidesinfo">pp display book</div>
+		</div>
+		
+		<div class="mySlides">
+			<div><img src="./onl_products/clearpics/A1 Drawing Board.jpg" width="1366px" height="390px"></div>
+			<div class="slidesinfo">A1 Drawing Board</div>
+		</div>
+		
+		<div class="mySlides slideactive">
+			<div><img src="./onl_products/clearpics/Drafting Table.jpg" width="1366px" height="390px"></div>
+			<div class="slidesinfo">Drafting Table</div>
+		</div>
+		<div class="mySlides slideactive">
+			<div><img src="./onl_products/clearpics/Drafting Machine.jpg" width="1366px" height="390px"></div>
+			<div class="slidesinfo">Drafting Machine</div>
+		</div>
+		<div class="mySlides slideactive">
+			<div><img src="./onl_products/clearpics/ecowise ring binder 4204 series.jpg" width="1366px" height="390px"></div>
+			<div class="slidesinfo">ecowise ring binder 4204 series</div>
+		</div>
+		<div class="mySlides slideactive">
+			<div><img src="./onl_products/clearpics/Pen Set 9.jpg" width="1366px" height="390px"></div>
+			<div class="slidesinfo">Pen Set 9</div>
+		</div>
+		<div class="mySlides slideactive">
+			<div><img src="./onl_products/clearpics/Pen Set 3.jpg" width="1366px" height="390px"></div>
+			<div class="slidesinfo">Pen Set 3</div>
+		</div>
+	</div>
+	-->
+</div>
+<!--
+<section class="imageBox">
+	<h1>...Truly the leading importer and distributor of writing, drawing &amp art materials...<br>...and stationery for schools & offices in Nigeria...<br>...and the West-Africa sub-region...<br>.........</h1>
+<div class="flip_box">
+	<div class="flip_box_inner">
+		<div class="flip_box_front">
+		<table>
+		<tr>
+			<td><img src="./onl_products/clearpics/pp display book.jpg" width="400px" height="200px"></td>
+			<td><img src="./onl_products/clearpics/A1 Drawing Board.jpg" width="400px" height="200px"></td>
+			<td><img src="./onl_products/clearpics/Drafting Table.jpg" width="400px" height="200px"></td>
+		</tr>
+		<tr>
+			<td><img src="./onl_products/clearpics/Drafting Machine.jpg" width="400px" height="200px"></td>
+			<td><img src="./onl_products/clearpics/ecowise ring binder 4204 series.jpg" width="400px" height="200px"></td>
+			<td><img src="./onl_products/clearpics/Pen Set 9.jpg" width="400px" height="200px"></td>
+		</tr>
+		</table>
+		</div>
+		<div class="flip_box_back">
+		<table>
+		<tr>
+			<td><img src="./onl_products/clearpics/t square.jpg" width="400px" height="200px"></td>
+			<td><img src="./onl_products/clearpics/Pen Set 3.jpg" width="400px" height="200px"></td>
+			<td><img src="./onl_products/clearpics/Pen Set 9.jpg" width="400px" height="200px"></td>
+		</tr>
+		<tr>
+			<td><img src="./onl_products/clearpics/Drafting Machine.jpg" width="400px" height="200px"></td>
+			<td><img src="./onl_products/clearpics/A1 Drawing Board.jpg" width="400px" height="200px"></td>
+			<td><img src="./onl_products/clearpics/pp display book.jpg" width="400px" height="200px"></td>
+		</tr>
+		</table>
+		</div>
+		</div>
+	</div>
+</section>
+<div style="background:linear-gradient(to top,rgba(0,0,0,.5),rgba(255,255,255,.4));">
+<!--create the bottom list items-->
+<!--
+	<section id="maindiv">
+		<div id="productlisting" class="onl_services">
+			<h2>PRODUCT LISTING</h2>
+			<p>OKWEBURG OFFERS AN ENDLESS VARIETY<br>OF PRODUCTS<br>FOR BOTH LARGE AND SMALL BUSINESSES<br>ISO TESTED AND TRUSTED<br>
+			...FOR ALL OUR PRODUCTS LISTING</p>
+			<a href="onlproducts.html"><button class="btn btn-sm btn-success">Click here<i class="glyphicon glyphicon-chevron-down"></i></button></a>
+		</div>
+		
+		<div id="customercare" class="onl_services">
+			<h2>CUSTOMER CARE</h2>
+			<p>HAVE ANY QUESTIONS<br>AND/OR SUGGESTIONS?<br>OKWEBURG CUSTOMER PERSONNEL<br>IS HERE FOR YOU<br>
+			...TALK TO US NOW</p>
+			<a href="contact_page.html"><button class="btn btn-sm btn-success">Contact us<i class="glyphicon glyphicon-phone"></i></button></a>
+		</div>
+	</section>
+		<footer class="footer-logos">
+			<ul>
+				<li><img src="rotringlogo.jpg" width="70px" height="40px"></li>
+				<li><img src="monamilogo.jpg" width="70px" height="40px"></li>
+				<li><img src="uhulogo.png" width="70px" height="40px"></li>
+				<li><img src="staedtlerlogo.png" width="70px" height="40px"></li>
+				<li><img src="skrebbalogo.png" width="70px" height="40px"></li>
+				<li><img src="kalboardlogo.jpg" width="70px" height="40px"></li>
+			</ul>
+			<ul>
+				<li><p style="color:#FFA07A;font-size:20px;display:inline;">BEI</p><p style="margin-right:10px;display:inline;color:dodgerblue;font-size:20px">JING</p></li>
+				<li><img src="royaltalenslogo.png" width="70px" height="40px"></li>
+				<li><img src="kangarologo.jpg" width="70px" height="40px"></li>
+				<li><img src="isomarslogo.jpg" width="70px" height="40px"></li>
+				<li><img src="rocadalogo.jpg" width="70px" height="40px"></li>
+			</ul>
+			<ul>
+				<li><p style="color:#FFA07A;font-size:20px;display:inline;">EL</p><p style="margin-right:10px;display:inline;color:dodgerblue;font-size:20px">FEN</p></li>
+				<li><p style="color:#FFA07A;font-size:20px;display:inline;">GLOBAL</p><p style="margin-right:10px;display:inline;color:dodgerblue;font-size:20px">NOTES</p></li>
+				<li><p style="color:#FFA07A;font-size:20px;display:inline;">SCHOELLER</p><p style="margin-right:10px;display:inline;color:dodgerblue;font-size:20px">SHAMMER</p></li>
+				<li><p style="color:#FFA07A;font-size:20px;display:inline;">MA</p><p style="margin-right:10px;display:inline;color:dodgerblue;font-size:20px">TAI</p></li>
+			</ul>
+			<ul>
+				<li><p style="color:#FFA07A;font-size:20px;display:inline;">DATA</p><p style="margin-right:10px;display:inline;color:dodgerblue;font-size:20px">ZONE</p></li>
+				<li><p style="color:#FFA07A;font-size:20px;display:inline;">LUX</p><p style="margin-right:10px;display:inline;color:dodgerblue;font-size:20px">OR</p></li>
+				<li><p style="color:#FFA07A;font-size:20px;display:inline;">DR</p><p style="margin-right:10px;display:inline;color:dodgerblue;font-size:20px">BOARD</p></li>
+				<li><p style="color:#FFA07A;font-size:20px;display:inline;">IN</p><p style="margin-right:10px;display:inline;color:dodgerblue;font-size:20px">TIME</p></li>
+			</ul>
+		</footer>
+</div>-->
+
+	<script>
+		var slideIndex = 1;
+		autoshowSlides();
+		flipImageBox();
+		/*-------create a carousel that  slides infinitely using a recursive function and setTimeout()------*/
+		function autoshowSlides(){
+			var slides = document.getElementsByClassName("mySlides");
+			var i;
+			for(i=0;i<slides.length;i++){
+			slides[i].style.display = "none";
+			}
+			slideIndex++;
+			if(slideIndex > slides.length){
+				slideIndex = 1;
+			}
+			slides[slideIndex-1].style.display = "block";
+			setTimeout(autoshowSlides,1500);
+		}
+		/*-------create a carousel that slides infinitely using a recursive function and setTimeout()------*/
+	function flipImageBox(){
+	var flipBox = document.getElementsByClassName("flip_box");
+	var inner = document.getElementsByClassName("flip_box_inner");
+	
+
+	function flip(){
+		if(inner[0].style.transform == "rotateX(180deg)"){
+			inner[0].style.transform = "rotateX(0deg)";
+		}else{
+			inner[0].style.transform = "rotateX(180deg)";
+		}
+	}
+	setInterval(flip,2000);
+	}
+				
+	/*-----toggle the products&services dropdown page on and off----*/
+	/*
+
+		/*-----toggle the products&services dropdown page on and off----*/
+		/* Open */
+function openNav() {
+  document.getElementById("myNav").style.height = "100%";
+}
+
+/* Close */
+function closeNav() {
+  document.getElementById("myNav").style.height = "0%";
+}
+	</script>
+
+</body>
+</html>
